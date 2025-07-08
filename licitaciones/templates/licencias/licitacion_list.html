@@ -1,0 +1,14 @@
+{% extends 'licencias/base.html' %}
+
+{% block title %}Licitaciones{% endblock %}
+
+{% block content %}
+<h2>Resultados de búsqueda / Lista de Licitaciones</h2>
+<ul>
+    {% for licitacion in resultados %}
+        <li><strong>{{ licitacion.titulo }}</strong> - {{ licitacion.estado }}</li>
+    {% empty %}
+        <li>No se encontraron resultados.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

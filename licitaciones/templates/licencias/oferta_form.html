@@ -1,0 +1,12 @@
+{% extends 'licencias/base.html' %}
+
+{% block title %}Crear Licitación{% endblock %}
+
+{% block content %}
+<h2>Registrar Licitación</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Guardar</button>
+</form>
+{% endblock %}
