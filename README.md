@@ -28,7 +28,7 @@ Cada licitación puede tener múltiples ofertas asociadas. El sistema está orie
 1. **Clonar el repositorio:**
 
 ```bash
-git clone https://github.com/tuusuario/TuPrimeraPaginaGaldeano.git
+git clone https://github.com/fedegaldeano/TuPrimeraPaginaGaldeano.git
 cd TuPrimeraPaginaGaldeano
 ```
 
