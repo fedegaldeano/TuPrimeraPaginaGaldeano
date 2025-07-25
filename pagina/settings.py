@@ -30,7 +30,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'TuPrimeraPagina_Galdeano.urls'
+ROOT_URLCONF = 'pagina.urls'
 
 # Templates
 TEMPLATES = [
@@ -49,7 +49,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'TuPrimeraPagina_Galdeano.wsgi.application'
+WSGI_APPLICATION = 'pagina.wsgi.application'
 
 # Base de datos (SQLite por defecto)
 DATABASES = {

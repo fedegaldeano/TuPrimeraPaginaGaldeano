@@ -1,6 +1,20 @@
 from django.shortcuts import render, redirect
 from .forms import EmpresaForm, LicitacionForm, LicitadorForm, OfertaForm, BuscarLicitacionForm
 from .models import Licitacion
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render
+from django.contrib.auth.views import LoginView, LogoutView
+from django.urls import reverse_lazy
+
+class CustomLoginView(LoginView):
+    template_name = 'licencias/login.html'
+
+class CustomLogoutView(LogoutView):
+    next_page = reverse_lazy('home')
+
+@login_required
+def profile(request):
+    return render(request, 'licencias/profile.html')
 
 def home(request):
     return render(request, 'licencias/home.html')
@@ -48,3 +62,6 @@ def resultados_busqueda(request):
 def listar_licitaciones(request):
     licitaciones = Licitacion.objects.all()
     return render(request, 'licencias/licitacion_list.html', {'resultados': licitaciones})
+
+def about(request):
+    return render(request, 'licencias/about.html')
